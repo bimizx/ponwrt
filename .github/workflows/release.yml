@@ -23,7 +23,7 @@ concurrency:
 jobs:
   build:
     name: Build ${{ matrix.target }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 360
     environment: release
     strategy:
@@ -31,7 +31,6 @@ jobs:
       matrix:
         target:
           - an7581
-          - an7583
 
     steps:
       - uses: actions/checkout@v6
